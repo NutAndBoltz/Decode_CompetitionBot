@@ -13,8 +13,7 @@ public class RobotHardware {
     public DcMotor backLeftDrive    = null;
     public DcMotor backRightDrive   = null;
 
-    public DcMotor leftIntake     = null;
-    public DcMotor rightIntake     = null;
+    public DcMotor intake     = null;
 
     // Define a constructor that allows the OpMode to pass a reference to itself.
     public RobotHardware(LinearOpMode opmode) {
@@ -33,16 +32,14 @@ public class RobotHardware {
         backLeftDrive   = myOpMode.hardwareMap.get(DcMotor.class, "BL_drive");
         backRightDrive  = myOpMode.hardwareMap.get(DcMotor.class, "BR_drive");
 
-        leftIntake = myOpMode.hardwareMap.get(DcMotor.class, "L_Intake");
-        rightIntake = myOpMode.hardwareMap.get(DcMotor.class, "R_Intake");
+        intake = myOpMode.hardwareMap.get(DcMotor.class, "intake");
 
         frontLeftDrive.setDirection(DcMotor.Direction.REVERSE);
         backLeftDrive.setDirection(DcMotor.Direction.REVERSE);
         frontRightDrive.setDirection(DcMotor.Direction.FORWARD);
         backRightDrive.setDirection(DcMotor.Direction.FORWARD);
 
-        leftIntake.setDirection(DcMotor.Direction.FORWARD);
-        rightIntake.setDirection(DcMotor.Direction.REVERSE); //Might have to swap with 44
+        intake.setDirection(DcMotor.Direction.FORWARD);
 
         //slideClawServo  = myOpMode.hardwareMap.get(Servo.class, "slide_claw");
 
