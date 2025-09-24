@@ -51,7 +51,7 @@ public class Drive extends LinearOpMode {
             }
             robot.intake.setPower(intakePower);
 
-            // Ball Launcher with A button (may require change)
+            // Ball Launcher with A button (may require changes)
             double launcherPower = 0;
             if (gamepad1.x) {
                 launcherPower = 1.0;  // Launch
