@@ -14,7 +14,7 @@ public class RobotHardware {
 
     public DcMotor intake           = null;
 
-    //public DcMotor launcher = null;
+    public DcMotor launcher = null;
 
     public RobotHardware(LinearOpMode opmode) {
         myOpMode = opmode;
@@ -28,7 +28,7 @@ public class RobotHardware {
         backRightDrive  = myOpMode.hardwareMap.get(DcMotor.class, "BR_drive");
 
         intake = myOpMode.hardwareMap.get(DcMotor.class, "intake");
-        //launcher = myOpMode.hardwareMap.get(DcMotor.class, "launcher");
+        launcher = myOpMode.hardwareMap.get(DcMotor.class, "launcher");
 
         frontLeftDrive.setDirection(DcMotor.Direction.REVERSE);
         backLeftDrive.setDirection(DcMotor.Direction.REVERSE);
@@ -36,7 +36,7 @@ public class RobotHardware {
         backRightDrive.setDirection(DcMotor.Direction.FORWARD);
 
         intake.setDirection(DcMotor.Direction.FORWARD);
-        //launcher.setDirection(DcMotor.Direction.FORWARD);      //Make reverse if necessary
+        launcher.setDirection(DcMotor.Direction.FORWARD);      //Make reverse if necessary
 
         myOpMode.telemetry.addData(">", "Hardware Initialized");
         myOpMode.telemetry.update();

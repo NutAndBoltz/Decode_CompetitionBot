@@ -51,20 +51,19 @@ public class Drive extends LinearOpMode {
             }
             robot.intake.setPower(intakePower);
 
-            /*
+            // Ball Launcher with A button (may require change).
             double launcherPower = 0;
-            if (gamepad1.right_trigger > 0.1) {
+            if (gamepad1.x) {
                 launcherPower = 1.0;  // Launch
             }
             robot.launcher.setPower(launcherPower);
-            */
 
             telemetry.addData("FrontLeft", frontLeftPower);
             telemetry.addData("BackLeft", backLeftPower);
             telemetry.addData("FrontRight", frontRightPower);
             telemetry.addData("BackRight", backRightPower);
             telemetry.addData("Intake", intakePower);
-            //telemetry.addData("Launcher", launcherPower);
+            telemetry.addData("Launcher", launcherPower);
             telemetry.update();
         }
     }
